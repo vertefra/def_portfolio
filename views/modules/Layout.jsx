@@ -11,7 +11,6 @@ const Layout = ({children}) => {
             <title>Document</title>
         </head>
         <body>
-            <Header/>
             {children}
         </body>
         </html>)
