@@ -12,4 +12,13 @@ const userSchema = mongoose.Schema({
 
 const User = mongoose.model('User', userSchema)
 
+User.prototype.getUserByID = async id => {
+  try {
+    const user = await User.findById(id)
+    return user
+  } catch (err) {
+    return err
+  }
+}
+
 export default User
