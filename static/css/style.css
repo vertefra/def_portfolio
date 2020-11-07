@@ -1,0 +1,23 @@
+body {
+	background-image: url('/back_1.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: contain;
+}
+
+.appear {
+	opacity: 0;
+	animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateX(-15px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}

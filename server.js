@@ -3,6 +3,7 @@ import env from 'dotenv';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import methodOverride from 'method-override';
+import bodyParser from 'body-parser';
 
 import connectDB from './config/database.js';
 import expressReactViews from 'express-react-views';
@@ -19,11 +20,13 @@ const app = express();
 app.set('views', 'views');
 app.set('view engine', 'jsx');
 app.use(express.static(__dirname + '/static'));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
+app.use(bodyParser.json());
 
 app.engine('jsx', expressReactViews.createEngine());
 
-app.use('/index', userRoutes);
+app.use('/user', userRoutes);
 app.use('/admin', adminRoutes);
 
 app.listen(3001, () => {

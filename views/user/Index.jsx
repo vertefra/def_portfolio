@@ -1,4 +1,11 @@
 import React from 'react';
+import {
+	Container,
+	Jumbotron,
+	Col,
+	Fade,
+	Row,
+} from 'react-bootstrap';
 import Header from '../modules/Header';
 import Layout from '../modules/Layout';
 
@@ -10,8 +17,22 @@ const Index = ({ user }) => {
 	console.log('user: ', user);
 	return (
 		<Layout>
-			<Header />
-			<h1>body</h1>
+			<Container fluid>
+				<Header name={user.name} />
+				<Row>
+					<Col lg={4}>
+						<Jumbotron
+							as="div"
+							className="py-5 px-3 my-2 appear"
+							fluid
+						>
+							<p style={{ fontSize: '2em' }} className="text-left">
+								{user.description}
+							</p>
+						</Jumbotron>
+					</Col>
+				</Row>
+			</Container>
 		</Layout>
 	);
 };

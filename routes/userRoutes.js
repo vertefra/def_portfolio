@@ -1,8 +1,12 @@
-import express from 'express'
-import { getUserIndex } from '../controllers/userControllers.js'
+import express from 'express';
+import {
+	getUserIndex,
+	updateUserInfo,
+} from '../controllers/userControllers.js';
 
-const router = express.Router()
+const router = express.Router();
 
-router.route('/').get(getUserIndex)
+router.route('/').get(getUserIndex);
+router.route('/:ID').put(updateUserInfo);
 
-export default router
+export default router;
