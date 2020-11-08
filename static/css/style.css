@@ -28,6 +28,34 @@
   outline: none;
 }
 
+.fadeIn {
+  opacity: 0;
+  animation: 1.5s fadeIn forwards;
+  animation-delay: 0.8s;
+}
+
+.appear {
+  animation: 1.5s appear forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 @media only screen and (max-width: 600px) {
   .primary-btn {
     font-size: 0.5em;
@@ -103,6 +131,34 @@
   outline: none;
 }
 
+.fadeIn {
+  opacity: 0;
+  animation: 1.5s fadeIn forwards;
+  animation-delay: 0.8s;
+}
+
+.appear {
+  animation: 1.5s appear forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 @media only screen and (max-width: 600px) {
   .primary-btn {
     font-size: 0.5em;
@@ -184,6 +240,34 @@
   outline: none;
 }
 
+.fadeIn {
+  opacity: 0;
+  animation: 1.5s fadeIn forwards;
+  animation-delay: 0.8s;
+}
+
+.appear {
+  animation: 1.5s appear forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 @media only screen and (max-width: 600px) {
   .primary-btn {
     font-size: 0.5em;
@@ -266,6 +350,34 @@
   outline: none;
 }
 
+.fadeIn {
+  opacity: 0;
+  animation: 1.5s fadeIn forwards;
+  animation-delay: 0.8s;
+}
+
+.appear {
+  animation: 1.5s appear forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 @media only screen and (max-width: 600px) {
   .primary-btn {
     font-size: 0.5em;
@@ -283,6 +395,9 @@ footer {
 
 .mediaLink {
   cursor: pointer;
+}
+.mediaLink a {
+  color: black;
 }
 
 .cp {
@@ -316,6 +431,10 @@ body {
 
 ul {
   list-style: none;
+}
+
+a {
+  color: #e9f0fc;
 }
 
 /*# sourceMappingURL=style.css.map */
