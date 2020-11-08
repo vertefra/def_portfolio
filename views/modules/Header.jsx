@@ -6,20 +6,24 @@ const Header = ({ name }) => {
 			<div className="brand">
 				<h1 className="brand">
 					<span className="brand-h">V</span>
-					{name}
+					<a href="/user">{name}</a>
 				</h1>
 			</div>
 			<div>
 				<ul className="nav">
 					<li>
-						<button className="primary-btn">projects</button>
-					</li>
-					<li>
-						<button className="primary-btn">working on</button>
+						<button className="primary-btn">
+							<a href="/user/projects">myProjects</a>
+						</button>
 					</li>
 					<li>
 						<button className="primary-btn">
-							Languages and stacks
+							<a href="/user/working">workingOn</a>
+						</button>
+					</li>
+					<li>
+						<button className="primary-btn">
+							<a href="/user/techs">techsAndSkils</a>
 						</button>
 					</li>
 				</ul>

@@ -5,7 +5,7 @@ export const getUserIndex = async (req, res) => {
 		const user = await User.findOne({});
 		res.render('user/Index', { user });
 	} catch (err) {
-		res.send(err);
+		res.json({ error: err });
 	}
 };
 
@@ -21,5 +21,16 @@ export const updateUserInfo = async (req, res) => {
 			},
 		);
 		res.render('user/Index', { user });
-	} catch (err) {}
+	} catch (err) {
+		res.json({ error: err });
+	}
+};
+
+export const notFound = async (req, res) => {
+	try {
+		const user = await User.findOne({});
+		res.render('modules/WorkInProgress', { user });
+	} catch (err) {
+		res.json({ error: err });
+	}
 };

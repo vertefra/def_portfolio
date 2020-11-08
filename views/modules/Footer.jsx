@@ -6,6 +6,7 @@ import { FaPhone } from 'react-icons/fa';
 import { FaCopyright } from 'react-icons/fa';
 
 const Footer = ({ user }) => {
+	console.log(user);
 	return (
 		<footer>
 			<div className="mediaLink">
