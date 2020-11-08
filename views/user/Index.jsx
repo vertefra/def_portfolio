@@ -13,8 +13,8 @@ const Index = ({ user }) => {
 			<Header name={user.name} />
 			<div className="content">
 				<div className="jumbo">
-					<div className="hero">
-						<h1 style={{ fontSize: '2em' }} className="text-left">
+					<div className="hero fadeIn">
+						<h1 style={{ fontSize: '2em' }}>
 							CODE IT
 							<p className="tagline">
 								if you can imagine it, you can code it

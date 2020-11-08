@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
 				<title>vertefra</title>
 			</head>
 			<body>
-				<div className="wrapper">{children}</div>
+				<div className="wrapper appear">{children}</div>
 			</body>
 		</html>
 	);
