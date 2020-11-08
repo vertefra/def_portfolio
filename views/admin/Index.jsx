@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button, Container, Form, Row } from 'react-bootstrap';
 import Layout from '../modules/Layout.jsx';
 
 // @route       GET - /user

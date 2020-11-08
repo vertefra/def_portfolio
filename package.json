@@ -6,12 +6,15 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js --watch '*.*' --ignore 'node_modules/' -e js,jsx,json"
+    "server": "nodemon server.js --watch '*.*' --ignore 'node_modules/' -e js,jsx,json",
+    "dev": "concurrently \"npm run server\" \"npm run build-sass\" ",
+    "build-sass": "sass --watch sass/style.scss:static/css/style.css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0",
+    "concurrently": "^5.3.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-react-views": "^0.11.0",
@@ -19,7 +22,7 @@
     "mongoose": "^5.10.13",
     "nodemon": "^2.0.6",
     "react": "^16.14.0",
-    "react-bootstrap": "^1.4.0",
-    "react-dom": "^16.14.0"
+    "react-dom": "^16.14.0",
+    "sass": "^1.29.0"
   }
 }

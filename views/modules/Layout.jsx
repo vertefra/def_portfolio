@@ -1,5 +1,4 @@
-import React, { Children } from 'react';
-import Header from './Header';
+import React from 'react';
 
 const Layout = ({ children }) => {
 	return (
@@ -10,12 +9,12 @@ const Layout = ({ children }) => {
 					name="viewport"
 					content="width=device-width, initial-scale=1.0"
 				/>
-				<link rel="stylesheet" href="/css/bootstrap.min.css" />
 				<link rel="stylesheet" href="/css/style.css" />
-
-				<title>Document</title>
+				<title>vertefra</title>
 			</head>
-			<body>{children}</body>
+			<body>
+				<div className="wrapper">{children}</div>
+			</body>
 		</html>
 	);
 };

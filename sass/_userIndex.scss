@@ -1,0 +1,40 @@
+@import './variables';
+
+.content {
+	background-image: url('/img/back.jpg');
+	height: 86vh;
+	position: relative;
+}
+
+.jumbo {
+	background-image: linear-gradient(
+		rgba(0, 0, 0, 0.7),
+		rgba(0, 0, 0, 0.7),
+		rgba(91, 0, 71, 0.5)
+	);
+	width: 100%;
+	height: 100%;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	margin: 0 auto;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero {
+	color: $col-text;
+	font-family: $montserrat;
+	font-size: $fs-xl;
+}
+
+.tagline {
+	font-family: lato;
+	font-size: $fs-s;
+	color: $col-warning;
+	font-weight: 100;
+	text-transform: capitalize;
+}

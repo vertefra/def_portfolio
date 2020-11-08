@@ -1,0 +1,37 @@
+@import './variables';
+
+.navbar {
+	background-image: linear-gradient(black, rgba(0, 0, 0, 0.75));
+	background-color: $col-primary;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+	height: 12vh;
+	padding: $sp-2 0;
+}
+
+.brand {
+	font-family: $montserrat;
+	font-size: $fs-m;
+	margin: $sp-1 $sp-2;
+	color: $col-text;
+	text-transform: uppercase;
+}
+
+.brand-h {
+	color: $col-primary;
+	font-size: $fs-l;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.nav li {
+	margin: 0 $sp-2;
+	font-size: $fs-l;
+	font-family: $lato;
+	font-weight: 900;
+}
