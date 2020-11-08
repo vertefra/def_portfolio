@@ -1,0 +1,36 @@
+@import './variables';
+
+footer {
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: $col-text;
+	height: 8vh;
+}
+
+.mediaLink {
+	cursor: pointer;
+}
+
+.cp {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: $montserrat;
+
+	p {
+		margin: 0 $sp-1;
+		font-size: $fs-s;
+	}
+}
+
+@media only screen and(max-width: 600px) {
+	.mediaLink {
+		svg {
+			height: 1em;
+			width: 1em;
+		}
+	}
+}

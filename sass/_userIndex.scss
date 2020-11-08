@@ -2,7 +2,7 @@
 
 .content {
 	background-image: url('/img/back.jpg');
-	height: 86vh;
+	height: 78vh;
 	position: relative;
 }
 
@@ -29,12 +29,32 @@
 	color: $col-text;
 	font-family: $montserrat;
 	font-size: $fs-xl;
+	text-align: center;
+	position: relative;
+	bottom: 1.5em;
 }
 
 .tagline {
 	font-family: lato;
-	font-size: $fs-s;
+	font-size: $fs-xxs;
 	color: $col-warning;
 	font-weight: 100;
 	text-transform: capitalize;
+}
+
+@media only screen and(max-width: 600px) {
+	.content {
+		height: 58.5vh;
+	}
+
+	.hero {
+		font-size: $fs-l;
+		margin-top: $sp-5;
+		position: static;
+	}
+
+	.jumbo {
+		align-items: flex-start;
+		height: 100%;
+	}
 }

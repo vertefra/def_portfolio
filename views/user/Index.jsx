@@ -1,6 +1,7 @@
 import React from 'react';
-import Header from '../modules/Header';
-import Layout from '../modules/Layout';
+import Footer from '../modules/Footer.jsx';
+import Header from '../modules/Header.jsx';
+import Layout from '../modules/Layout.jsx';
 
 // @route       GET - /user
 // @desc        show the user info
@@ -22,6 +23,7 @@ const Index = ({ user }) => {
 					</div>
 				</div>
 			</div>
+			<Footer user={user} />
 		</Layout>
 	);
 };

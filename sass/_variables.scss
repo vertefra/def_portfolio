@@ -12,7 +12,9 @@ $montserrat: 'Montserrat', sans-serif;
 $josephin: 'Josefin Sans', sans-serif;
 $lato: 'Lato', sans-serif;
 
-$fs-s: 0.3em;
+$fs-xxs: 0.3em;
+$fs-xs: 0.5em;
+$fs-s: 0.8;
 $fs-m: 1.2em;
 $fs-l: 1.6em;
 $fs-xl: 2.6em;
@@ -43,4 +45,10 @@ $sp-5: 1.5em;
 
 .primary-btn:active {
 	outline: none;
+}
+
+@media only screen and(max-width: 600px) {
+	.primary-btn {
+		font-size: $fs-xs;
+	}
 }

@@ -9,6 +9,18 @@
 	width: 100%;
 	height: 12vh;
 	padding: $sp-2 0;
+
+	.nav {
+		display: flex;
+		justify-content: space-evenly;
+
+		li {
+			margin: 0 $sp-2;
+			font-size: $fs-l;
+			font-family: $lato;
+			font-weight: 900;
+		}
+	}
 }
 
 .brand {
@@ -24,14 +36,18 @@
 	font-size: $fs-l;
 }
 
-.nav {
-	display: flex;
-	justify-content: space-evenly;
-}
+@media only screen and(max-width: 600px) {
+	.brand {
+		font-size: $fs-m;
+	}
 
-.nav li {
-	margin: 0 $sp-2;
-	font-size: $fs-l;
-	font-family: $lato;
-	font-weight: 900;
+	.navbar {
+		padding: 0;
+		flex-wrap: wrap;
+		height: 35vh;
+
+		.nav {
+			flex-direction: column;
+		}
+	}
 }
