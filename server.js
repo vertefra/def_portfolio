@@ -10,7 +10,7 @@ import expressReactViews from 'express-react-views';
 import userRoutes from './routes/userRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
 
-const PORT = os.environment.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 env.config();
