@@ -10,7 +10,7 @@
     "server": "nodemon server.js --watch '*.*' --ignore 'node_modules/' -e js,jsx,json",
     "dev": "concurrently \"npm run server\" \"npm run build-sass\" ",
     "build-sass": "sass --watch sass/style.scss:static/css/style.css",
-    "start": "npm run server"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
