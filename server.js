@@ -28,6 +28,10 @@ app.use(bodyParser.json());
 
 app.engine('jsx', expressReactViews.createEngine());
 
+app.get('/', (req, res) => {
+	res.redirect('/user');
+});
+
 app.use('/user', userRoutes);
 // app.use('/admin', adminRoutes);
 
