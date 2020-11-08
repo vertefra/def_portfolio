@@ -20,83 +20,89 @@ const Index = ({ user }) => {
 
 	return (
 		<Layout>
-			<Container>
-				<Row>
+			<div className="container">
+				<div className="adminTitle">
 					<h1>Admin interface</h1>
-				</Row>
-				<Row>
-					<Form
+				</div>
+				<div>
+					<form
 						action={`/user/${user._id}?_method=PUT`}
 						method="POST"
 					>
-						<Form.Group>
-							<Form.Label>User Name</Form.Label>
-							<Form.Control
+						<div className="dataField">
+							<label htmlFor="brand">User Name</label>
+							<input
 								type="text"
 								defaultValue={user.name}
 								name="name"
+								id="brand"
 							/>
-						</Form.Group>
+						</div>
 
-						<Form.Group>
-							<Form.Label>Descpription</Form.Label>
-							<Form.Control
-								as="textarea"
-								rows={3}
-								defaultValue={user.description}
+						<div className="dataField">
+							<label htmlFor="description">Descpription</label>
+							<textarea
+								type="text"
 								name="description"
-							/>
-						</Form.Group>
+								defaultValue={user.description}
+							></textarea>
+						</div>
 
-						<Form.Group>
-							<Form.Label>Email</Form.Label>
-							<Form.Control
+						<div className="dataField">
+							<label htmlFor="email">Email</label>
+							<input
 								type="email"
 								defaultValue={user.email}
 								name="email"
+								id="email"
 							/>
-						</Form.Group>
+						</div>
 
-						<Form.Group>
-							<Form.Label>Phone</Form.Label>
-							<Form.Control
+						<div className="dataField">
+							<label htmlFor="phone">Phone</label>
+							<input
 								type="text"
 								defaultValue={user.phone}
 								name="phone"
 							/>
-						</Form.Group>
+						</div>
 
-						<Form.Group>
-							<Form.Label>Twitter</Form.Label>
-							<Form.Control
+						<div className="dataField">
+							<label htmlFor="twitter">Twitter</label>
+							<input
 								type="text"
 								defaultValue={user.twitter}
 								name="twitter"
+								id="twitter"
 							/>
-						</Form.Group>
+						</div>
 
-						<Form.Group>
-							<Form.Label>Linkedin</Form.Label>
-							<Form.Control
+						<div className="dataField">
+							<label className="linkedin">Linkedin</label>
+							<input
 								type="text"
 								defaultValue={user.linkedin}
 								name="linkedin"
+								id="linkedin"
 							/>
-						</Form.Group>
+						</div>
 
-						<Form.Group>
-							<Form.Label>GitHub</Form.Label>
-							<Form.Control
+						<div className="dataField">
+							<label htmlFor="github">GitHub</label>
+							<input
 								type="text"
 								defaultValue={user.github}
 								name="github"
+								id="github"
 							/>
-						</Form.Group>
+						</div>
 
-						<Button type="submit">submit</Button>
-					</Form>
-				</Row>
-			</Container>
+						<button type="submit" className="primary-btn">
+							submit
+						</button>
+					</form>
+				</div>
+			</div>
 		</Layout>
 	);
 };

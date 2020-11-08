@@ -1,0 +1,61 @@
+@import '../variables';
+
+.container {
+	background-color: $col-secondary;
+	min-height: 100vh;
+
+	form {
+		background-color: $col-primary;
+		padding: $sp-3 0;
+		margin: 0 auto;
+		width: 80%;
+		display: flex;
+		flex-wrap: wrap;
+		border-radius: 10px;
+
+		button {
+			background-color: $col-secondary;
+			max-height: 80px;
+			margin: $sp-3 auto;
+			padding: $sp-4;
+			min-width: 300px;
+		}
+	}
+}
+
+.adminTitle {
+	width: 100%;
+	padding: $sp-3 0;
+	h1 {
+		font-family: $josephin;
+		margin: 0 auto;
+		width: 100%;
+		text-align: center;
+		font-size: $fs-xl;
+	}
+}
+
+.dataField {
+	margin: $sp-3 $sp-2;
+	padding: $sp-4;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	min-width: 300px;
+	border-radius: 10px;
+
+	label {
+		margin: $sp-2 0;
+		color: $col-text;
+	}
+
+	input {
+		font-size: $fs-m;
+		padding: $sp-1 $sp-2;
+	}
+
+	textarea {
+		resize: none;
+		min-height: 300px;
+	}
+}
