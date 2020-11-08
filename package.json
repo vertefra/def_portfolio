@@ -4,11 +4,13 @@
   "description": "",
   "main": "serves.js",
   "type": "module",
+  "engine": "node v15.0.1",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js --watch '*.*' --ignore 'node_modules/' -e js,jsx,json",
     "dev": "concurrently \"npm run server\" \"npm run build-sass\" ",
-    "build-sass": "sass --watch sass/style.scss:static/css/style.css"
+    "build-sass": "sass --watch sass/style.scss:static/css/style.css",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",

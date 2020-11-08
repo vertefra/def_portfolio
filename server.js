@@ -10,6 +10,7 @@ import expressReactViews from 'express-react-views';
 import userRoutes from './routes/userRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
 
+const PORT = process.env.PORT || 3001;
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 env.config();
@@ -28,8 +29,8 @@ app.use(bodyParser.json());
 app.engine('jsx', expressReactViews.createEngine());
 
 app.use('/user', userRoutes);
-app.use('/admin', adminRoutes);
+// app.use('/admin', adminRoutes);
 
-app.listen(3001, () => {
-	console.log('Server listening on 3001'.green);
+app.listen(PORT, () => {
+	console.log(`Server listening on ${PORT}`.green);
 });
