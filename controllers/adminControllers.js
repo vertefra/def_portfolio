@@ -17,6 +17,7 @@ export const getCreateProjectForm = async (req, res) => {
 export const postCreateNewProject = async (req, res) => {
 	try {
 		const project = await Project.create(req.body);
+		res.redirect('/user');
 	} catch (err) {
 		console.log(err);
 	}
