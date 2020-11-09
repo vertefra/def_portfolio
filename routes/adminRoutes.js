@@ -1,8 +1,14 @@
-import express from 'express'
-import { getAdminIndex } from '../controllers/adminControllers.js'
+import express from 'express';
+import {
+	getAdminIndex,
+	getCreateProjectForm,
+	postCreateNewProject,
+} from '../controllers/adminControllers.js';
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/', getAdminIndex)
+router.route('/').get(getAdminIndex);
+router.route('/projects/create').get(getCreateProjectForm);
+router.route('/admin/projects').post(postCreateNewProject);
 
-export default router
+export default router;
