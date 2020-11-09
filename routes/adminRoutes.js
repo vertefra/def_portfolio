@@ -9,6 +9,6 @@ const router = express.Router();
 
 router.route('/').get(getAdminIndex);
 router.route('/projects/create').get(getCreateProjectForm);
-router.route('/admin/projects').post(postCreateNewProject);
+router.route('/projects').post(postCreateNewProject);
 
 export default router;

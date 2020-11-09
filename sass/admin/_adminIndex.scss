@@ -59,3 +59,16 @@
 		min-height: 300px;
 	}
 }
+
+.projectList {
+	background-color: $col-primary;
+	width: 80%;
+	margin: 10px auto;
+	padding: 20px;
+}
+
+.updateProject {
+	margin: 5px;
+	padding: 5px 10px;
+	cursor: pointer;
+}

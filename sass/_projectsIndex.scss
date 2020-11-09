@@ -1,0 +1,60 @@
+@import './variables';
+
+.projects {
+	background-image: none;
+}
+
+.projectCard {
+	display: flex;
+
+	.projectImg {
+		img {
+			width: 300px;
+		}
+	}
+
+	.cardBody {
+		padding: $sp-1;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		position: relative;
+	}
+
+	h1 {
+		font-size: $fs-xs;
+		color: $col-secondary;
+		text-transform: capitalize;
+		padding: $sp-2 0;
+	}
+
+	.description {
+		font-size: $fs-xs;
+		color: $col-text;
+		padding: $sp-2 0;
+	}
+
+	.links {
+		font-size: $fs-xs;
+		display: flex;
+		justify-content: space-evenly;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		text-decoration: underline;
+	}
+}
+
+// TAG STYLE
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.tag {
+	font-size: $fs-xxs;
+	padding: $sp-1 $sp-3;
+	border-radius: 15px;
+	margin: $sp-1;
+}

@@ -5,8 +5,8 @@ import Layout from '../modules/Layout.jsx';
 // @desc        show the user info
 // @auth        private - need jwt token
 
-const Index = ({ user }) => {
-	const defaultNewUser = {
+const Index = ({ user, projects }) => {
+	const defaultUser = {
 		name: 'new Name',
 		description: 'description',
 		email: 'test@email.com',
@@ -16,7 +16,10 @@ const Index = ({ user }) => {
 		github: '',
 	};
 
-	user = user || defaultNewUser;
+	console.log('PROJECTS:', projects);
+
+	user = user || defaultUser;
+	projects = projects || [];
 
 	return (
 		<Layout>
@@ -101,6 +104,24 @@ const Index = ({ user }) => {
 							submit
 						</button>
 					</form>
+					<form>
+						<button className="primary-btn">
+							<a href="/admin/projects/create">Create New Project</a>
+						</button>
+					</form>
+					<div className="projectList">
+						<h1>Projects:</h1>
+
+						{projects.map((p) => {
+							return (
+								<a href={`/admin/projects/${p._id}`}>
+									<button type="button" className="updateProject">
+										{p.projectName}
+									</button>
+								</a>
+							);
+						})}
+					</div>
 				</div>
 			</div>
 		</Layout>

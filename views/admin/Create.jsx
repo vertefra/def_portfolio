@@ -35,7 +35,7 @@ const Create = ({ project }) => {
 						<input
 							type="text"
 							defaultValue={project.projectName}
-							name="name"
+							name="projectName"
 							id="brand"
 						/>
 					</div>
@@ -84,7 +84,7 @@ const Create = ({ project }) => {
 						<input
 							type="text"
 							defaultValue={project.tags}
-							name="github"
+							name="tags"
 							id="github"
 						/>
 					</div>
