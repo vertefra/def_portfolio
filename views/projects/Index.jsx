@@ -12,7 +12,7 @@ const Index = ({ user, projects }) => {
 	return (
 		<Layout>
 			<Header name={user.name} />
-			<div className="content">
+			<div className="content no-img">
 				<div className="jumbo">
 					<div className="hero fadeIn">
 						{projects.length > 0 &&

@@ -14,7 +14,7 @@ const Create = ({ project }) => {
 	// If project is define means that it's un update otherwise is  a new project
 
 	const action = project
-		? `/projects/${project._id}?_method=PUT`
+		? `/admin/projects/${project._id}?_method=PUT`
 		: `/admin/projects`;
 
 	const button = project ? 'update project' : 'create project';
@@ -41,7 +41,7 @@ const Create = ({ project }) => {
 					</div>
 
 					<div className="dataField">
-						<label htmlFor="description">Descpription</label>
+						<label htmlFor="description">Description</label>
 						<textarea
 							type="text"
 							name="description"

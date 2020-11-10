@@ -1,31 +1,29 @@
 @import './variables';
 
-.projects {
+.no-img {
 	background-image: none;
+	background-color: $col-primary;
+	background-attachment: fixed;
 }
 
 .projectCard {
 	display: flex;
+	margin: $sp-3 0;
+	max-width: 80%;
 
 	.projectImg {
+		position: relative;
 		img {
 			width: 300px;
 		}
 	}
 
 	.cardBody {
-		padding: $sp-1;
+		padding: 0 $sp-1;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		position: relative;
-	}
-
-	h1 {
-		font-size: $fs-xs;
-		color: $col-secondary;
-		text-transform: capitalize;
-		padding: $sp-2 0;
+		justify-content: flex-start;
 	}
 
 	.description {
@@ -42,7 +40,24 @@
 		position: absolute;
 		bottom: 0;
 		text-decoration: underline;
+		background-color: black;
 	}
+}
+
+.projectTitle {
+	display: flex;
+	align-items: center;
+	font-size: $fs-xs;
+	font-weight: 900;
+	font-family: $montserrat;
+	text-decoration: underline;
+}
+
+.description {
+	font-size: $fs-xs;
+	font-family: $lato;
+	font-weight: 100;
+	text-align: left;
 }
 
 // TAG STYLE
@@ -50,6 +65,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	margin: $sp-1 0;
 }
 
 .tag {
