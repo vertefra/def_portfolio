@@ -709,7 +709,7 @@ footer {
 
 @media only screen and (max-width: 600px) {
   .skillBar {
-    width: 400px;
+    width: 100%;
   }
 
   .skillName {
