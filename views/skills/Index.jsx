@@ -5,6 +5,12 @@ import Layout from '../modules/Layout';
 import Skill from '../modules/Skill';
 
 const Index = ({ skills, projects, user }) => {
+	const skillsArr = Object.keys(skills)
+		.map((key) => {
+			return { [key]: skills[key] };
+		})
+		.sort((a, b) => Object.values(b)[0] - Object.values(a)[0]);
+
 	return (
 		<Layout>
 			<Header name={user.name} />
@@ -13,15 +19,15 @@ const Index = ({ skills, projects, user }) => {
 					<div className="hero fadeIn">
 						<div className="skillsContainer">
 							<h1 className="projectTitle skillTitle">
-								How often I use:
+								How often I use in my projects:
 							</h1>
-							{Object.keys(skills).map((key, i) => {
+							{skillsArr.map((obj, i) => {
 								return (
-									skills[key] > 0.1 && (
+									Object.values(obj)[0] > 0.1 && (
 										<Skill
 											key={i}
-											skillName={key}
-											skillFreq={skills[key]}
+											skillName={Object.keys(obj)[0]}
+											skillFreq={Object.values(obj)[0]}
 										/>
 									)
 								);
