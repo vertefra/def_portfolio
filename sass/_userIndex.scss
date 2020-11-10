@@ -9,29 +9,29 @@
 .jumbo {
 	background-image: linear-gradient(
 		rgba(0, 0, 0, 0.7),
-		rgba(0, 0, 0, 0.7),
-		rgba(91, 0, 71, 0.5)
+		rgba(0, 0, 0, 0.4),
+		rgba(91, 0, 71, 0.4),
+		rgba(91, 0, 71, 0.1)
 	);
+
 	width: 100%;
-	min-height: 100%;
-	right: 0;
-	left: 0;
-	top: 0;
-	bottom: 0;
+	min-height: 70vh;
+	// right: 0;
+	// left: 0;
+	// top: 0;
+	// bottom: 0;
 	margin: 0 auto;
-	position: absolute;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.hero {
+.hero,
+.projectsHero {
 	color: $col-text;
 	font-family: $montserrat;
 	font-size: $fs-xl;
 	text-align: center;
-	position: relative;
-	bottom: 1.5em;
 }
 
 .tagline {
@@ -53,15 +53,23 @@
 		margin-top: 25vh; // heigh of the absoluted positioned navbar
 	}
 
+	.wrapper {
+		min-height: 67vh;
+	}
+
 	.hero {
 		font-size: $fs-l;
-		margin-top: $sp-5;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		position: static;
-		min-height: 90vh;
+		min-height: 67vh;
 	}
 
 	.jumbo {
 		align-items: flex-start;
+		min-height: 67vh;
 		position: static;
 		background-attachment: fixed;
 	}

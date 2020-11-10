@@ -45,6 +45,7 @@
 }
 
 .projectTitle {
+	color: $col-text;
 	display: flex;
 	align-items: center;
 	font-size: $fs-xs;
@@ -54,6 +55,7 @@
 }
 
 .description {
+	color: $col-sec-text;
 	font-size: $fs-xs;
 	font-family: $lato;
 	font-weight: 100;
