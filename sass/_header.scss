@@ -39,13 +39,18 @@
 @media only screen and(max-width: 600px) {
 	.brand {
 		font-size: $fs-m;
+		margin: 0;
 	}
 
 	.navbar {
+		z-index: 1;
 		padding: 0;
 		flex-wrap: wrap;
-		height: 35vh;
-
+		top: 0;
+		height: 25vh;
+		position: fixed;
+		justify-content: center;
+		align-items: center;
 		.nav {
 			flex-direction: column;
 		}

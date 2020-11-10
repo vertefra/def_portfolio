@@ -30,9 +30,10 @@ $sp-5: 1.5em;
 	color: $col-text;
 	border-radius: 5px;
 	cursor: pointer;
-	font-weight: 900;
+	font-weight: 400;
+	font-size: $fs-s;
 	outline: none;
-	min-width: 300px;
+	min-width: 280px;
 	border-bottom: 4px $col-primary solid;
 	transition: 0.5s;
 }
@@ -79,5 +80,7 @@ $sp-5: 1.5em;
 @media only screen and(max-width: 600px) {
 	.primary-btn {
 		font-size: $fs-xs;
+		padding: 0;
+		border-bottom: 1px $col-primary solid;
 	}
 }

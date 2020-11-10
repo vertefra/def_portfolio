@@ -36,4 +36,10 @@ footer {
 			width: 1em;
 		}
 	}
+
+	footer {
+		position: fixed;
+		bottom: 0;
+		z-index: 1;
+	}
 }

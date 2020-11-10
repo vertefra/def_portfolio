@@ -12,19 +12,19 @@ const Header = ({ name }) => {
 			<div>
 				<ul className="nav">
 					<li>
-						<button className="primary-btn">
-							<a href="/user/projects">myProjects</a>
-						</button>
+						<a href="/user/projects">
+							<button className="primary-btn">myProjects</button>
+						</a>
 					</li>
 					<li>
-						<button className="primary-btn">
-							<a href="/user/working">workingOn</a>
-						</button>
+						<a href="/user/working">
+							<button className="primary-btn">workingOn</button>
+						</a>
 					</li>
 					<li>
-						<button className="primary-btn">
-							<a href="/user/techs">techsAndSkils</a>
-						</button>
+						<a href="/user/techs">
+							<button className="primary-btn">techsAndSkils</button>
+						</a>
 					</li>
 				</ul>
 			</div>

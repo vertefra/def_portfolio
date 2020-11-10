@@ -9,9 +9,10 @@
   color: #e9f0fc;
   border-radius: 5px;
   cursor: pointer;
-  font-weight: 900;
+  font-weight: 400;
+  font-size: 0.8em;
   outline: none;
-  min-width: 300px;
+  min-width: 280px;
   border-bottom: 4px #570b48 solid;
   transition: 0.5s;
 }
@@ -56,6 +57,8 @@
 @media only screen and (max-width: 600px) {
   .primary-btn {
     font-size: 0.5em;
+    padding: 0;
+    border-bottom: 1px #570b48 solid;
   }
 }
 .navbar {
@@ -95,12 +98,18 @@
 @media only screen and (max-width: 600px) {
   .brand {
     font-size: 1.2em;
+    margin: 0;
   }
 
   .navbar {
+    z-index: 1;
     padding: 0;
     flex-wrap: wrap;
-    height: 35vh;
+    top: 0;
+    height: 25vh;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
   }
   .navbar .nav {
     flex-direction: column;
@@ -112,9 +121,10 @@
   color: #e9f0fc;
   border-radius: 5px;
   cursor: pointer;
-  font-weight: 900;
+  font-weight: 400;
+  font-size: 0.8em;
   outline: none;
-  min-width: 300px;
+  min-width: 280px;
   border-bottom: 4px #570b48 solid;
   transition: 0.5s;
 }
@@ -159,18 +169,20 @@
 @media only screen and (max-width: 600px) {
   .primary-btn {
     font-size: 0.5em;
+    padding: 0;
+    border-bottom: 1px #570b48 solid;
   }
 }
 .content {
   background-image: url("/img/back.jpg");
-  height: 78vh;
+  min-height: 78vh;
   position: relative;
 }
 
 .jumbo {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(91, 0, 71, 0.5));
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   right: 0;
   left: 0;
   top: 0;
@@ -199,20 +211,28 @@
   text-transform: capitalize;
 }
 
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+}
+
 @media only screen and (max-width: 600px) {
   .content {
-    height: 58.5vh;
+    min-height: 58.5vh;
+    margin-top: 25vh;
   }
 
   .hero {
     font-size: 1.6em;
     margin-top: 1.5em;
     position: static;
+    min-height: 90vh;
   }
 
   .jumbo {
     align-items: flex-start;
-    height: 100%;
+    position: static;
+    background-attachment: fixed;
   }
 }
 .primary-btn {
@@ -221,9 +241,10 @@
   color: #e9f0fc;
   border-radius: 5px;
   cursor: pointer;
-  font-weight: 900;
+  font-weight: 400;
+  font-size: 0.8em;
   outline: none;
-  min-width: 300px;
+  min-width: 280px;
   border-bottom: 4px #570b48 solid;
   transition: 0.5s;
 }
@@ -268,6 +289,8 @@
 @media only screen and (max-width: 600px) {
   .primary-btn {
     font-size: 0.5em;
+    padding: 0;
+    border-bottom: 1px #570b48 solid;
   }
 }
 .container {
@@ -344,9 +367,10 @@
   color: #e9f0fc;
   border-radius: 5px;
   cursor: pointer;
-  font-weight: 900;
+  font-weight: 400;
+  font-size: 0.8em;
   outline: none;
-  min-width: 300px;
+  min-width: 280px;
   border-bottom: 4px #570b48 solid;
   transition: 0.5s;
 }
@@ -391,6 +415,8 @@
 @media only screen and (max-width: 600px) {
   .primary-btn {
     font-size: 0.5em;
+    padding: 0;
+    border-bottom: 1px #570b48 solid;
   }
 }
 footer {
@@ -426,6 +452,12 @@ footer {
     height: 1em;
     width: 1em;
   }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+  }
 }
 .primary-btn {
   background-color: transparent;
@@ -433,9 +465,10 @@ footer {
   color: #e9f0fc;
   border-radius: 5px;
   cursor: pointer;
-  font-weight: 900;
+  font-weight: 400;
+  font-size: 0.8em;
   outline: none;
-  min-width: 300px;
+  min-width: 280px;
   border-bottom: 4px #570b48 solid;
   transition: 0.5s;
 }
@@ -480,6 +513,8 @@ footer {
 @media only screen and (max-width: 600px) {
   .primary-btn {
     font-size: 0.5em;
+    padding: 0;
+    border-bottom: 1px #570b48 solid;
   }
 }
 .no-img {
@@ -552,6 +587,24 @@ footer {
   margin: 0.3em;
 }
 
+@media only screen and (max-width: 600px) {
+  .projectCard {
+    flex-direction: column;
+    margin: 0.6em auto;
+    width: 95%;
+    border-bottom: 2px solid whitesmoke;
+  }
+  .projectCard .projectImg {
+    margin-bottom: 0.3em;
+  }
+  .projectCard .projectImg img {
+    width: 100%;
+  }
+
+  .no-img {
+    position: static;
+  }
+}
 * {
   padding: 0;
   margin: 0;
