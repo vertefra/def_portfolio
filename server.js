@@ -9,7 +9,7 @@ import connectDB from './config/database.js';
 import expressReactViews from 'express-react-views';
 import userRoutes from './routes/userRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
-
+import skillRoutes from './routes/skillRoutes.js';
 const PORT = process.env.PORT || 3001;
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -33,7 +33,8 @@ app.get('/', (req, res) => {
 });
 
 app.use('/user', userRoutes);
-// app.use('/admin', adminRoutes);
+app.use('/skills', skillRoutes);
+app.use('/admin', adminRoutes);
 
 app.listen(PORT, () => {
 	console.log(`Server listening on ${PORT}`.green);
