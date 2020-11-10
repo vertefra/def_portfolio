@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/user', userRoutes);
-app.use('/admin', adminRoutes);
+// app.use('/admin', adminRoutes);
 
 app.listen(PORT, () => {
 	console.log(`Server listening on ${PORT}`.green);
