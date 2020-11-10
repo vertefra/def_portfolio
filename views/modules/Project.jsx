@@ -9,14 +9,14 @@ const Project = ({ project }) => {
 		tags = project.tags.split(',');
 	}
 
-	const selectTagColor = (tag) => {
-		switch (tag) {
-			case 'JavaScript':
-				return 'red';
-			default:
-				return 'yellow';
-		}
-	};
+	// const selectTagColor = (tag) => {
+	// 	switch (tag) {
+	// 		case 'JavaScript':
+	// 			return 'red';
+	// 		default:
+	// 			return 'yellow';
+	// 	}
+	// };
 
 	const tagStyle = {
 		fontSize: '1em',
@@ -51,9 +51,7 @@ const Project = ({ project }) => {
 					<FaTags size="0.4em" />
 					{tags.length > 0 &&
 						tags.map((t, i) => {
-							return (
-								<Tag key={i} tag={t} color={selectTagColor(t)} />
-							);
+							return <Tag key={i} tag={t} />;
 						})}
 				</section>
 			</div>
