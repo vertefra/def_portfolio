@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato:ital,wght@0,300;0,700;1,300&family=Montserrat:wght@200;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato:ital,wght@0,300;0,700;1,300&family=Montserrat:wght@200;400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato:ital,wght@0,300;0,700;1,300&family=Montserrat:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato:ital,wght@0,300;0,700;1,300&family=Montserrat:wght@200;400;600&display=swap");
 .primary-btn {
   background-color: transparent;
   padding: 0.9em 0 0.9em 0;
@@ -612,6 +613,81 @@ footer {
     position: static;
   }
 }
+.primary-btn {
+  background-color: transparent;
+  padding: 0.9em 0 0.9em 0;
+  color: #e9f0fc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 0.8em;
+  outline: none;
+  min-width: 280px;
+  border-bottom: 4px #570b48 solid;
+  transition: 0.5s;
+}
+
+.primary-btn:hover {
+  color: black;
+  background-color: #bfc968;
+}
+
+.primary-btn:active {
+  outline: none;
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: 1.5s fadeIn forwards;
+  animation-delay: 0.8s;
+}
+
+.appear {
+  animation: 1.5s appear forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .primary-btn {
+    font-size: 0.5em;
+    padding: 0;
+    border-bottom: 1px #570b48 solid;
+  }
+}
+.skillBar {
+  align-self: flex-start;
+}
+
+.skillName {
+  font-size: 0.5em;
+}
+
+.bar {
+  width: 200px;
+  background-color: #bfc968;
+  height: 1.2em;
+  font-size: 0.5em;
+  color: #570b48;
+  border-radius: 0 15px 15px 0;
+}
+
 * {
   padding: 0;
   margin: 0;
