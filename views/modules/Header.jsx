@@ -22,7 +22,7 @@ const Header = ({ name }) => {
 						</a>
 					</li>
 					<li>
-						<a href="/user/techs">
+						<a href="/skills">
 							<button className="primary-btn">techsAndSkils</button>
 						</a>
 					</li>

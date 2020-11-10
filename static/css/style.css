@@ -673,21 +673,62 @@ footer {
 }
 .skillBar {
   align-self: flex-start;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  width: 450px;
 }
 
 .skillName {
   font-size: 0.5em;
+  margin: 0.3em 0.6em;
+  width: 200px;
+  text-align: left;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.skillTitle {
+  margin: 0.6em auto;
+  text-align: center;
 }
 
 .bar {
   width: 200px;
-  background-color: #bfc968;
+  background-image: linear-gradient(#bfc968, #ecf882, #51552a);
   height: 1.2em;
   font-size: 0.5em;
   color: #570b48;
   border-radius: 0 15px 15px 0;
+  box-shadow: 3px 3px 3px #5b78b6;
 }
 
+@media only screen and (max-width: 600px) {
+  .skillBar {
+    width: 400px;
+  }
+
+  .skillName {
+    font-size: 0.5em;
+    width: 100px;
+    font-weight: 900;
+  }
+
+  .bar {
+    height: 1.2em;
+    width: 220px;
+    font-size: 0.3em;
+    font-weight: 900;
+  }
+
+  .skillBar {
+    width: 200px;
+  }
+}
 * {
   padding: 0;
   margin: 0;

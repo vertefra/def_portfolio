@@ -2,14 +2,16 @@ export const extractTagsFrequency = (projectTags) => {
 	const projects = projectTags.length;
 	let strings = '';
 	for (let tagString of projectTags) {
-		strings += tagString.tags;
+		strings += ', ' + tagString.tags;
 	}
 
 	const tags = strings.split(', ');
 	const freq = {};
 
 	for (let tag of tags) {
-		freq[tag] = freq[tag] + 1 || 1;
+		if (tag) {
+			freq[tag] = freq[tag] + 1 || 1;
+		}
 	}
 
 	// trasfor in percentage

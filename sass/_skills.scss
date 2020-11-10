@@ -2,17 +2,64 @@
 
 .skillBar {
 	align-self: flex-start;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid black;
+	width: 450px;
 }
 
 .skillName {
 	font-size: $fs-xs;
+	margin: $sp-1 $sp-2;
+	width: 200px;
+	text-align: left;
+}
+
+.skillsContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.skillTitle {
+	margin: $sp-2 auto;
+	text-align: center;
 }
 
 .bar {
 	width: 200px;
-	background-color: $col-warning;
+	// background-color: $col-warning;
+	background-image: linear-gradient(
+		$col-warning,
+		$col-warning-lighter,
+		$col-warning-darker
+	);
 	height: $fs-m;
 	font-size: $fs-xs;
 	color: $col-primary;
 	border-radius: 0 15px 15px 0;
+	box-shadow: 3px 3px 3px $col-secondary;
+}
+
+@media only screen and(max-width: 600px) {
+	.skillBar {
+		width: 400px;
+	}
+
+	.skillName {
+		font-size: $fs-xs;
+		width: 100px;
+		font-weight: 900;
+	}
+
+	.bar {
+		height: $fs-m;
+		width: 220px;
+		font-size: $fs-xxs;
+		font-weight: 900;
+	}
+
+	.skillBar {
+		width: 200px;
+	}
 }

@@ -7,9 +7,20 @@ const renderBars = () => {
 
 	for (let bar of bars) {
 		const percentage = parseInt(bar.textContent);
-		const newLength = percentage * barWidth * 0.01;
-		bar.style.width = `${percentage * barWidth * 0.01}px`;
+		bar.textContent = `${percentage}%`;
+		animateRender(bar, percentage * barWidth * 0.01);
 	}
+};
+
+const animateRender = (bar, length, speed = 40) => {
+	let l = 0;
+	const value = setInterval(() => {
+		bar.style.width = `${l}px`;
+		l++;
+		if (l >= length) {
+			clearInterval(value);
+		}
+	}, speed);
 };
 
 renderBars();

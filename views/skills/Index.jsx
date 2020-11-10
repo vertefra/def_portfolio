@@ -11,18 +11,22 @@ const Index = ({ skills, projects, user }) => {
 			<div className="content no-img">
 				<div className="jumbo">
 					<div className="hero fadeIn">
-						<h1>On {projects} projects, I worked with: </h1>
-						{Object.keys(skills).map((key, i) => {
-							return (
-								skills[key] > 0.1 && (
-									<Skill
-										key={i}
-										skillName={key}
-										skillFreq={skills[key]}
-									/>
-								)
-							);
-						})}
+						<div className="skillsContainer">
+							<h1 className="projectTitle skillTitle">
+								How often I use:
+							</h1>
+							{Object.keys(skills).map((key, i) => {
+								return (
+									skills[key] > 0.1 && (
+										<Skill
+											key={i}
+											skillName={key}
+											skillFreq={skills[key]}
+										/>
+									)
+								);
+							})}
+						</div>
 					</div>
 				</div>
 				<script src="/scripts/scripts.js"></script>
