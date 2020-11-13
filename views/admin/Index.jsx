@@ -16,8 +16,6 @@ const Index = ({ user, projects }) => {
 		github: '',
 	};
 
-	console.log('PROJECTS:', projects);
-
 	user = user || defaultUser;
 	projects = projects || [];
 

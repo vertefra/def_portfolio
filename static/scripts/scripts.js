@@ -23,4 +23,6 @@ const animateRender = (bar, length, speed = 40) => {
 	}, speed);
 };
 
+window.addEventListener('fetch', (ev) => {});
+
 renderBars();
