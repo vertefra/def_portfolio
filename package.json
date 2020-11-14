@@ -8,15 +8,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js --watch '*.*' --ignore 'node_modules/' -e js,jsx,json",
-    "dev": "concurrently \"npm run server\" \"npm run build-sass\" ",
+    "dev": "export NODE_ENV=development && concurrently \"npm run server\" \"npm run build-sass\" ",
     "build-sass": "sass --watch sass/style.scss:static/css/style.css",
-    "start": "node server.js"
+    "start": "export NODE_ENV=production && node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0",
     "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-react-views": "^0.11.0",
